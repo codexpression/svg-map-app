@@ -11,7 +11,7 @@ const fetchState = (stateTitle) => {
     redirect: 'follow'
     };
  
- fetch("http://64.227.114.69/lga_list", requestOptions)
+ fetch("https://data4gov.pythonanywhere/lga_list", requestOptions)
  .then(response => response.json()).then(data => {
     console.log(data.response.content.LGAs)
        document.getElementById('info-block').style.display = 'block'; 
@@ -46,7 +46,7 @@ const fetchProject = () =>{
       redirect: 'follow'
     };
     
-    fetch("http://64.227.114.69/project_column_list", requestOptions)
+    fetch("https://data4gov.pythonanywhere/project_column_list", requestOptions)
       .then(response => response.text())
       .then(result => {
           console.log(result);
