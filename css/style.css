@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'century gothic', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+ul li {
+    list-style: none;
+}
+
+#page {
+    background: linear-gradient(204.19deg, #003C34 22.36%, #012D27 85.93%);
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 3%;
+}
+
+div#coat-of-arms img {
+    width: 70%;
+}
+
+svg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0.25%;
+    right: 11.34%;
+    top: 18.75%;
+    bottom: 18.75%;
+    box-shadow: 0px 4px 31px #01352E;
+}
+
+path {
+    fill: #034839;
+    stroke: rgb(1, 29, 24);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear alternate infinite;
+}
+
+.action-btn-set {
+    width: 30vw;
+    height: 15vh;
+    margin: auto;
+    position: absolute;
+    right: 27vw;
+    bottom: 18vh;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    /* background-color: rgba(0, 128, 128, 0.438); */
+}
+
+.action-btn-set button {
+    margin-top: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.action-btn-set button:hover{
+    cursor: pointer;
+    background-color: rgb(69, 179, 105);
+    color: white;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 882;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+path:hover {
+    fill: #012D27;
+}
+
+.focus {
+    fill: rgb(248, 233, 27);
+}
+
+div#facts {
+    position: absolute;
+    left: 66.53%;
+    right: 5.69%;
+    top: 30%;
+    bottom: 35%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    font-family: Relative;
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 10px; */
+    line-height: 30px;
+    /* or 167% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#NG-RI {
+    fill: #FFCC5C;
+}
+
+#NG-RI:hover, #NG-BY:hover, #NG-DE:hover, #NG-ED:hover {
+    fill: #01352E
+}
+
+#NG-BY {
+    fill: #F88600;
+}
+
+#NG-DE {
+    fill: #F35844;
+}
+
+#NG-ED {
+    fill: #FFEEAD;
+}
+
+.overlay-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay-bg {
+    background:linear-gradient(0deg, rgba(0, 53, 46, 0.8), rgba(0, 53, 46, 0.9)), url('../images/bg.jpeg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    animation-name: scale;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+div.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+div.center-content ul li {
+    list-style: none;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+div.input-search {
+    border-bottom: 1px solid #fff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+div.input-search img:nth-child(1) {
+    width: 8%;
+}
+
+div.input-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+}
+
+input[placeholder] {
+    color:#fff;
+}
+
+.overlay-menu main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    color: #FFFFFF;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1.0);
+    }
+    to {
+        transform: scale(2.0);
+    }
+}
+
+#info-block {
+    background:linear-gradient(0deg, rgba(0, 53, 46, 1), rgba(0, 53, 46, 1));
+    text-transform: uppercase;
+}
+
+.right-group div {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.state-info {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "a a a b b b b b b c c c";
+    width: 100%;
+    padding: 30px 5% 0;
+}
+
+.state-lga {
+    grid-area: a;
+    padding: 0px 1%;
+}
+
+/* .select-wrapper::after {
+    font-family: FontAwesome;
+  	content: '\f107';
+  	font-size: 28px;
+  	position: absolute;
+  	top: 12px;
+  	right: 20px;
+  	color: #434B67;
+  	pointer-events: none;
+} */
+
+#state-dropdown {
+    width: 305px;
+    height: 50px;
+    background: #024637;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 0 5%;
+    text-transform: uppercase;
+    outline: none;
+    margin: auto;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+
+#lga {
+    animation-name: showThat;
+    animation-duration: 2s;
+}
+
+#lga li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 0;
+    color: #C3D0C9;
+    transition: all .2s ease-in-out;
+   }
+
+#lga li.active-lga, #lga li:hover {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#lga h4 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#sub {
+    animation-name: showThat;
+    animation-duration: 2s;
+}
+
+#sub li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 0;
+    color: #C3D0C9;
+    transition: all .2s ease-in-out;
+}
+
+#sub li.active-sub, #sub li:hover {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#sub h4 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.chart-info {
+    grid-area: b; 
+    display: flex;
+    justify-content: center; 
+    animation-name: showThat;
+    animation-duration: 2s; 
+}
+
+@keyframes showThat {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sub-project {
+    padding-top: 27px;
+    grid-area: c;
+    text-align: end;
+}
+
+div.bottom-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 44px;
+    width: 100%;
+}
+
+div.bottom-bar .input-group form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 0;
+}
+
+div.bottom-bar .input-group form p {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* div.bottom-bar .input-group form input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+} */
+
