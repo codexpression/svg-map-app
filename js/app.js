@@ -6,7 +6,7 @@ fetch('js/states.json')
 })
 .then(data => {   
    for (let count = 0; count < ourStates.length; count++) {
-      $('#facts').hide();
+      // $('#facts').hide();
      
 
       $(ourStates[count]).mouseover(function () {
@@ -16,9 +16,9 @@ fetch('js/states.json')
          document.getElementById('slogan').innerHTML = data[count].slogan;
          document.getElementById('write-up').innerHTML = data[count].facts;
       });
-      $(ourStates[count]).mouseout(function () {
-            $('#facts').hide(); 
-      });
+      // $(ourStates[count]).mouseout(function () {
+      //       $('#facts').hide(); 
+      // });
    }
 })
 
