@@ -37,7 +37,7 @@ const fetchProject = () => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     
-    var raw = JSON.stringify({"project":"PUBLIC WORKS SEEFOR_FINAL"});
+    var raw = JSON.stringify({"project":"CDD ECONOMIC SEEFOR_FINAL"});
     
     var requestOptions = {
       method: 'POST',
