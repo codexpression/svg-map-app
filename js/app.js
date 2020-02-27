@@ -12,8 +12,8 @@ fetch('js/states.json')
       $(ourStates[count]).mouseover(function () {
          $('#facts').show();   
          document.getElementById('state').innerHTML = data[count].states;   
-         document.getElementById('capital').innerHTML = data[count].capital;
-         document.getElementById('slogan').innerHTML = data[count].slogan;
+         // document.getElementById('capital').innerHTML = data[count].capital;
+         // document.getElementById('slogan').innerHTML = data[count].slogan;
          document.getElementById('write-up').innerHTML = data[count].facts;
       });
       // $(ourStates[count]).mouseout(function () {
