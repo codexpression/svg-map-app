@@ -29,10 +29,13 @@ const fetchState = (stateTitle) => {
                     document.querySelectorAll('#lga li').forEach(lga => {
                         lga.classList.remove('active-lga');
                     })
-                
-                // document.getElementsByClassName('active-lga').length >0 ? document.getElementsByClassName('active-lga')[0].removeAttribute('className', 'active-lga') : 0
                 e.target.classList.add('active-lga');
                 lgaTitle = e.target.innerHTML;
+                if (e.target.className == 'active-lga') {
+                    
+
+                    renderPieChart();
+                }
                 fetchProject();
             })
         })
