@@ -30,12 +30,13 @@ const fetchState = (stateTitle) => {
                     })
                 e.target.classList.add('active-lga');
                 lgaTitle = e.target.innerHTML;
+                document.querySelector('#sub').innerHTML = '';
+                fetchProject();
                 if (e.target.className == 'active-lga') {
                     
-
+                    
                     renderPieChart();
                 }
-                fetchProject();
             })
         })
         
@@ -63,7 +64,7 @@ const fetchProject = () => {
             let li = document.createElement('li');
             document.querySelector('#sub').appendChild(li);
             document.querySelector('#sub li').className = 'active-sub';
-            li.innerHTML += sub;
+            li.innerHTML = sub;
             // console.log(li)
          });
         })
