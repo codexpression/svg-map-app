@@ -137,4 +137,3 @@ chartliexample20.setOption(option);
     })
 .catch(error => console.log('error', error));
 }
-

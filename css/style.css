@@ -231,8 +231,15 @@ input[placeholder] {
 }
 
 #info-block {
-    background:linear-gradient(0deg, rgba(0, 53, 46, 1), rgba(0, 53, 46, 1));
+    background:linear-gradient(0deg, #C3D0C9, #C3D0C9);
     text-transform: uppercase;
+
+}
+
+#info-block header {
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
 }
 
 .right-group div {
@@ -245,12 +252,15 @@ input[placeholder] {
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: "a a a b b b b b b c c c";
     width: 100%;
-    padding: 30px 5% 0;
+    height: 100vh;
+    /* padding: 30px 5% 0; */
 }
 
 .state-lga {
     grid-area: a;
     padding: 0px 1%;
+    display: flex;
+    align-items: center;
 }
 
 /* .select-wrapper::after {
@@ -347,6 +357,7 @@ input[placeholder] {
     grid-area: b; 
     display: flex;
     justify-content: center; 
+    align-items: center;
     animation-name: showThat;
     animation-duration: 2s; 
 }
@@ -364,6 +375,8 @@ input[placeholder] {
     padding-top: 27px;
     grid-area: c;
     text-align: end;
+    display: flex;
+    align-items: center;
 }
 
 div.bottom-bar {
@@ -418,5 +431,69 @@ div.bottom-bar .input-group form p {
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #003C34; 
-  }
+      background: #003C34; 
+    }
+    
+    .left-toggle-btn {
+        cursor: pointer;
+        position: absolute;
+        left: 227px;
+        top: 30%;
+    }
+    
+    .left-toggle-btn button {
+        padding: 0px 25px;
+        border:none;
+        border-radius: 5px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    background: #d2d2d2;
+    transform: rotate(-90deg);
+    position: fixed;
+    cursor: pointer;
+}
+
+.right-toggle-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 250px;
+    top: 30%;
+    margin-right: 81px;
+}
+
+.right-toggle-btn button {
+    padding: 0px 25px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
+    background: #d2d2d2;
+    transform: rotate(-90deg);
+    position: fixed;
+}
+
+.left-side-content {
+    position: absolute;
+    width: 270px;
+    height: 100%;
+    background: linear-gradient(to top, #03201C70, #028876b6),url('../images/bg.jpeg');
+    left: -270px;
+    transition: all 300ms linear;
+    overflow: auto;
+}
+
+.right-side-content {
+    position: absolute;
+    width: 270px;
+    height: 100%;
+    background: linear-gradient(to top, #03201C70, #028876b6),url('../images/bg.jpeg');
+    right: -270px;
+    transition: all 300ms linear;
+    overflow: auto;
+}
+
+aside.right-sidebar-active {
+    right: 0px;
+}
+
+aside.left-sidebar-active {
+    left: 0px;
+}

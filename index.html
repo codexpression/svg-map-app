@@ -37,7 +37,7 @@
                 
             </div>
             <div id="coat-of-arms">
-                <a href="index.html"><img src="./images/1411px-Coat_of_arms_of_Nigeria 2.png" alt=""></a>
+                <a href="index.html"><img src="./images/Wb_logo.png" style="width: 150px;" alt=""></a>
             </div>
             <div class="right-group">
                 <div id="menu-icon">
@@ -47,7 +47,7 @@
                 </div>
                 <div id="search">
                     <a href="#" onclick="document.querySelector('#search-container').style.display = 'block';//document.querySelector('#info-block').style.display = 'none'">
-                        <img src="./images/Search Glyph.svg" alt="">
+                        <!-- <img src="./images/Search Glyph.svg" alt=""> -->
                     </a>
                 </div>
             </div>
@@ -229,7 +229,7 @@
                         
                     </div>
                     <div id="coat-of-arms">
-                        <img src="./images/1411px-Coat_of_arms_of_Nigeria 2.png" alt="">
+                        <!-- <img src="./images/1411px-Coat_of_arms_of_Nigeria 2.png" alt=""> -->
                     </div>
                     <div id="close-icon">
                         <a href="#" onclick="document.querySelector('#menu').style.display = 'none'">
@@ -255,7 +255,7 @@
         
                     </div>
                     <div id="coat-of-arms">
-                        <img src="./images/1411px-Coat_of_arms_of_Nigeria 2.png" alt="">
+                        <img src="./images/Wb_logo.png" style="width: 150px;" alt="">
                     </div>
                     <div id="close-icon">
                         <a href="#" onclick="document.querySelector('#about').style.display = 'none'">
@@ -304,12 +304,12 @@
                 <header>
                     <div id="close-icon">
                         <a href="#" onclick="document.querySelector('#info-block').style.display = 'none'; 
-                        document.querySelector('#lga').innerHTML = '';//document.querySelector('#sub').innerHTML = ''">
+                        document.querySelector('#lga').innerHTML = '';document.querySelector('#sub').innerHTML = document.querySelector('#sub').innerHTML">
                             <img src="./images/close 2.svg" alt="">
                         </a>
                     </div>
                     <div id="coat-of-arms">
-                        <img src="./images/1411px-Coat_of_arms_of_Nigeria 2.png" alt="">
+                        <img src="./images/Wb_logo.png" style="width: 150px;" alt="">
                     </div>
                     <div class="right-group">
                         <div id="menu-icon">
@@ -325,7 +325,13 @@
                     </div>
                 </header>
                 <div class="state-info">
-                    <aside class="state-lga">
+                    <aside id="leftSidebar" class="state-lga left-side-content" style="height: 100vh;">
+                        <div class="left-toggle-btn" style="z-index: 5;" onclick="leftToggleSidebar();">
+                            <button>
+                                States/LGAs
+                            </button>
+                        </div>
+                        <div class="select-lga">
                         <div class="select-wrapper">
                             <select name="states" id="state-dropdown">
                                 <option value="Bayelsa">Bayelsa</option>
@@ -338,14 +344,21 @@
                             <h4>lga</h4>
                             
                         </ul>
+                        </div>
                     </aside>
                     <div class="chart-info" style="color:white !important">
                         <div class="ui segment">
-                            <div id="pieChart13" style="height: 70vh; width:70vw; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: rgba(126, 127, 154,0);" _echarts_instance_="ec_1582761989307"><div style="position: relative; overflow: hidden; width: 1029px; height: 700px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="1029" height="700" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 1029px; height: 700px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px Poppins; padding: 5px; left: 786px; top: 371px;"></div></div>
+                            <div id="pieChart13" style="height: 70vh; width:70vw; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;color:white;" _echarts_instance_="ec_1582761989307"><div style="position: relative; overflow: hidden; width: 1029px; height: 700px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;color: #fff;"><canvas width="1029" height="700" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 1029px; height: 700px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px Poppins; padding: 5px; left: 786px; top: 371px;"></div></div>
                         </div>
                         <!-- <div id="barchart"></div> -->
                     </div>
-                    <aside class="sub-project" style="height: 60vh;">
+                    
+                        <aside id="rightSidebar" class="sub-project right-side-content" style="height: 100vh;">    
+                            <div class="right-toggle-btn" onclick="rightToggleSidebar()">
+                                <button>
+                                    Projects
+                                </button>
+                            </div> 
                         <!-- <h4>Sub project Enterprise</h4> -->
                         <ul id="sub" style="overflow-y: scroll;overflow-x:hidden;height: 60vh;">
                             
@@ -370,6 +383,17 @@
 
         </div>
     </div>
+    <script type="text/javascript">
+    // Added by Yusuf AbdulRakim
+        function leftToggleSidebar(){
+            document.getElementById("leftSidebar").classList.toggle('left-sidebar-active');
+        }
+      
+        function rightToggleSidebar(){
+            document.getElementById("rightSidebar").classList.toggle('right-sidebar-active');
+        }
+      
+    </script>
     <script src="./js/app.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./fonts/fontawesome-free-5.11.2-web/js/all.min.js"></script>
