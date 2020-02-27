@@ -3,7 +3,7 @@ const fetchState = (stateTitle) => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
  
-    var raw = JSON.stringify({"project":"CDD ECONOMIC SEEFOR_FINAL","state":stateTitle});
+    var raw = JSON.stringify({"project":"CDD ECONOMIC SEEFOR_FINAL","state":stateTitle.toUpperCase()});
  
     var requestOptions = {
     method: 'POST',
@@ -25,7 +25,6 @@ const fetchState = (stateTitle) => {
         document.querySelectorAll('#lga li').forEach((lga)=>{
             let listItems = document.querySelectorAll('#lga li');
             lga.addEventListener('click', e=>{
-                console.dir(document.querySelectorAll('#lga li'))
                     document.querySelectorAll('#lga li').forEach(lga => {
                         lga.classList.remove('active-lga');
                     })

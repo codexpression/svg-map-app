@@ -2,7 +2,7 @@
 const renderPieChart = () => {
 
     let project = "CDD ECONOMIC SEEFOR_FINAL";
-    let state = "edo";
+    let state = "EDO";
     let lga = document.querySelector('.active-lga').innerHTML;
     let col1 = "CROP PRODUCTION";
     let col2 = false;
