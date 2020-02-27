@@ -439,7 +439,7 @@ div.bottom-bar .input-group form p {
         cursor: pointer;
         position: absolute;
         left: 227px;
-        top: 30%;
+        top: 45%;
     }
     
     .left-toggle-btn button {
@@ -456,8 +456,8 @@ div.bottom-bar .input-group form p {
 .right-toggle-btn {
     cursor: pointer;
     position: absolute;
-    right: 250px;
-    top: 30%;
+    right: 270px;
+    top: 45%;
     margin-right: 81px;
 }
 
