@@ -1,3 +1,4 @@
+// This is the file for loading the state, LGAs and Projects
 const fetchState = (stateTitle) => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -18,13 +19,19 @@ const fetchState = (stateTitle) => {
        data.response.content.LGAs.forEach(lga => {
            let li = document.createElement('li');
            document.querySelector('#lga').appendChild(li);
-           document.querySelector('#lga li').className = 'active-lga';
+        //    document.querySelector('#lga li').className = 'active-lga';
            li.innerHTML += lga;
         });
         document.querySelectorAll('#lga li').forEach((lga)=>{
+            let listItems = document.querySelectorAll('#lga li');
             lga.addEventListener('click', e=>{
-                // console.log('clicked');
-                // console.log(e.target.innerHTML)
+                console.dir(document.querySelectorAll('#lga li'))
+                    document.querySelectorAll('#lga li').forEach(lga => {
+                        lga.classList.remove('active-lga');
+                    })
+                
+                // document.getElementsByClassName('active-lga').length >0 ? document.getElementsByClassName('active-lga')[0].removeAttribute('className', 'active-lga') : 0
+                e.target.classList.add('active-lga');
                 lgaTitle = e.target.innerHTML;
                 fetchProject();
             })
@@ -55,7 +62,7 @@ const fetchProject = () => {
             document.querySelector('#sub').appendChild(li);
             document.querySelector('#sub li').className = 'active-sub';
             li.innerHTML += sub;
-            console.log(li)
+            // console.log(li)
          });
         })
       .catch(error => console.log('error', error));

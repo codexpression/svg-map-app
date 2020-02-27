@@ -1,10 +1,24 @@
-const renderPieChart = () => {
-    var dataSet = [];
+let project = "CDD ECONOMIC SEEFOR_FINAL";
+let state = "edo";
+let lga = "esan central";
+let col1 = "CROP PRODUCTION";
+let col2 = false;
+let col3 = false;
 
+const renderPieChart = (project, state, lga, col1, col2, col3) => {
+
+    
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-var raw = JSON.stringify({"project":"CDD ECONOMIC SEEFOR_FINAL","state":"edo","lga":"esan_central","col1":"group_qm9ug76/CROP_PRODUCTION","col2":false,"col3":false});
+var raw = JSON.stringify({
+    "project": project,
+    "state": state,
+    "lga": lga,
+    "col1": col1,
+    "col2": col2,
+    "col3": col3
+});
 
 var requestOptions = {
 method: 'POST',
@@ -125,4 +139,4 @@ chartliexample20.setOption(option);
 .catch(error => console.log('error', error));
 }
 
-renderPieChart();
+renderPieChart(project, state, lga, col1, col2, col3);
