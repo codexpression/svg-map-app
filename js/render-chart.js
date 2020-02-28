@@ -1,8 +1,8 @@
 
-const renderPieChart = () => {
+const renderPieChart = (expState) => {
 
     let project = "CDD ECONOMIC SEEFOR_FINAL";
-    let state = "EDO";
+    let state = expState.toUpperCase();
     let lga = document.querySelector('.active-lga').innerHTML;
     let col1 = "TOTAL COST OF SUB-PROJECT";
     let col2 = false;

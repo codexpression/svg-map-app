@@ -34,7 +34,7 @@ const fetchState = (stateTitle) => {
                 document.querySelector('#sub').innerHTML = '';
                 fetchProject();
                 if (e.target.className == 'active-lga') {                 
-                    renderPieChart();
+                    renderPieChart(stateTitle);
                 }
             })
         })
