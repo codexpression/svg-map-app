@@ -33,9 +33,7 @@ const fetchState = (stateTitle) => {
                 lgaTitle = e.target.innerHTML;
                 document.querySelector('#sub').innerHTML = '';
                 fetchProject();
-                if (e.target.className == 'active-lga') {
-                    
-                    
+                if (e.target.className == 'active-lga') {                 
                     renderPieChart();
                 }
             })
@@ -89,3 +87,9 @@ allNgStates.forEach(state => {
     })
 })
 
+document.getElementById('state-dropdown').addEventListener('change', fixDropDown);
+
+function fixDropDown() {
+    document.querySelector('#lga').innerHTML = ''
+    fetchState(this.options[this.selectedIndex].text);
+}
